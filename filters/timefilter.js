@@ -1,4 +1,4 @@
-angular.module('myApp').filter('timeFilter', function() {
+app.filter('timeFilter', function() {
     return function(input) {
         var min = Math.round(input / 60);
         var sec = input % 60;
