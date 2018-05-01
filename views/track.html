@@ -1,0 +1,8 @@
+<div class="container">
+        <img ng-src="{{ track.album.image[3] | imageFilter }}" style="float: left; margin: 10px;">
+        <div class="track-content">
+            <h5><a href="#/artist/{{track.artist.name}}">{{ track.artist.name }}</a></h5>
+            <h5><a href="#/album/{{track.artist.name}}/{{track.album.title}}">{{ track.album.title}}</a></h5>
+            <h2>{{ track.name }}</h2>
+        </div>
+</div>
