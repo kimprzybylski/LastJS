@@ -1,0 +1,16 @@
+<div class="jumbotron">
+        <img ng-src="images/logo_background.jpg" class="logo"/>
+        <h1 class="title">Welcome to LASTJS</h1>
+        <h3 class="title">Where music is everyting</h3>
+    </div>
+
+<div class="container">
+    <a ng-repeat="track in tracks" href="#/track/{{track.artist.name}}/{{track.name}}">
+    <div class="image-wrap" image-directive="{{ track.image[3] | imageFilter }}">
+        <div class="image-content">
+                <h5 class="text">{{ track.name }}</h5>
+                <p class="text">{{ track.artist.name }}</p>
+        </div>
+    </div>
+</a>
+</div>
