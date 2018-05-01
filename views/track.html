@@ -1,8 +1,18 @@
-<div class="container">
+<div class="jumbotron">
         <img ng-src="{{ track.album.image[3] | imageFilter }}" style="float: left; margin: 10px;">
         <div class="track-content">
             <h5><a href="#/artist/{{track.artist.name}}">{{ track.artist.name }}</a></h5>
             <h5><a href="#/album/{{track.artist.name}}/{{track.album.title}}">{{ track.album.title}}</a></h5>
             <h2>{{ track.name }}</h2>
         </div>
+</div>
+<div class="container">
+    <a ng-repeat="alternative in similar" href="#/artist/{{alternative.name}}">
+        <div class="image-wrap" image-directive="{{  alternative.image[3] | imageFilter }}">
+            <div class="image-content">
+                <h5 class="text">{{ alternative.name }}</h5>
+                <p class="text">{{ alternative.artist.name }}</p>
+            </div>
+        </div>
+    </a>
 </div>

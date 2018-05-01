@@ -4,7 +4,6 @@
     <p class="title">{{ artist.bio.content }}</p>
 </div>
 
-	<!--Similar artist tonen-->
 	<div class="container">
 		<a ng-repeat="alternative in artist.similar.artist" href="#/artist/{{alternative.name}}">
 			<div class="image-wrap" image-directive="{{  alternative.image[3] | imageFilter }}">

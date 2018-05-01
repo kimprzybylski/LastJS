@@ -14,6 +14,10 @@ app.factory('musicData', function($http) {
 
         getTrack: function(artist, track) {
             return $http({method: 'GET', url: 'http://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=0e621ec0b955900134a3f957fd85c139&artist=' + artist + '&track=' + track + '&format=json'});
+        },
+
+        getSimilarTrack: function (artist, track)  {
+            return $http({method: 'GET', url: 'http://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist=' + artist + '&track=' + track + '&api_key=0e621ec0b955900134a3f957fd85c139&format=json'});
         }
     };
 });

@@ -1,0 +1,16 @@
+<div class="container">
+			<h1 class="title">{{ album.name }} by {{ album.artist }}</h1>
+			<img class="center" ng-src="{{ album.image[3] | imageFilter }}" alt="{{ album.name }}" />
+			<p class="title">{{ album.wiki.summary }}</p>
+			<h3>Tracklist</h3>
+			<table class="table table-hover">
+					<tbody>
+					  <tr class="table-active" ng-repeat="track in album.tracks.track">
+						<th scope="row"> {{ $index +1 }}</th>
+						<td>{{ track.name }}</td>
+						<td><a href="{{ track.url }}">{{ track.url }}</a></td>
+						<td>{{ track.duration | timeFilter }}</td>
+					  </tr>
+					</tbody>
+			</table>
+	</div>
